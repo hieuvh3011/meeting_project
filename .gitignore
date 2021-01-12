@@ -1,0 +1,21 @@
+# MacOS X
+.DS_Store
+
+node_modules/
+
+#ide
+.idea/
+.vscode/
+
+#npm
+yarn.lock
+yarn.error
+yarn-error.log
+npm-debug.error
+package-lock.json
+
+#environment
+.env
+.env.production
+.env.staging
+.env.develop
