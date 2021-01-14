@@ -1,14 +1,19 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "./database";
+import Employee from "./employee";
+import RoleEmployee from "./role_employee";
 
 const Role = sequelize.define(
-  "employee",
+  "role",
   {
     // Model attributes are defined here
     roleType: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
+  },
+  {
+    underscored: true,
   }
 );
 
