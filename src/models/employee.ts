@@ -20,6 +20,9 @@ const Employee = sequelize.define(
     avatarUrl: {
       type: DataTypes.STRING,
     },
+    hashPassword: {
+      type: DataTypes.STRING
+    }
   },
   {
     underscored: true,
@@ -29,7 +32,6 @@ const Employee = sequelize.define(
 Employee.belongsTo(Department);
 Department.hasOne(Employee);
 
-Employee.hasOne(Department, {as: 'manager'})
 
 
 export default Employee;
