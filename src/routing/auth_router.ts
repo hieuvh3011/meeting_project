@@ -15,4 +15,8 @@ router.post("/login", async function (req, res) {
   await employeeController.onRequestLogin(req, res);
 });
 
+router.post("/register", async function (req, res) {
+  await employeeController.onRequestRegister(req, res);
+});
+
 module.exports = router;
