@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const employeeController = require("../controller/employee_controller");
+import EmployeeController from "../controller/employee_controller";
 
 // router.use(function timeLog(req, res, next) {
 //   console.log("Time: ", Date.now());
@@ -12,11 +12,11 @@ router.get("/", function (req, res) {
 });
 
 router.post("/login", async function (req, res) {
-  await employeeController.onRequestLogin(req, res);
+  await EmployeeController.onRequestLogin(req, res);
 });
 
 router.post("/register", async function (req, res) {
-  await employeeController.onRequestRegister(req, res);
+  await EmployeeController.onRequestRegister(req, res);
 });
 
 module.exports = router;
