@@ -10,7 +10,6 @@ export const sequelize = new Sequelize(_name, _username, _password, {
   dialect: "mysql",
   dialectModule: mysql2,
   host: _host,
-
 });
 
 module.exports = {

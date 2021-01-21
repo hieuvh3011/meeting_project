@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "./database";
 import Employee from "./employee";
-import RoleEmployee from "./role_employee";
 
 const Role = sequelize.define(
   "role",
@@ -16,5 +15,8 @@ const Role = sequelize.define(
     underscored: true,
   }
 );
+
+Employee.belongsTo(Role);
+Role.hasOne(Employee);
 
 export default Role;
